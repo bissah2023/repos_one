@@ -13,7 +13,7 @@ piece of work is entirely of my own creation.
   */
 #include <stdio.h>
 //HEADER FILE EXTRACT
-#define MAXPRODUCTNUM
+#define MAXPRODUCTNUM 3
 #define MAXGRAMNUM 
 typedef struct CatFoodInfo()
 {
@@ -133,37 +133,55 @@ void openingMessage()
   printf("Enter the details for 3 dry food bags of product data for analysis.\n");
   printf("NOTE: A 'serving' is 64g\n"):
 };
-void getCatFoodInfo(MAXPRODUCTNUM)
+void getCatFoodInfo(int max)
 {
     int i ;
-    for( i = 0 ; i < 3 ; i++ )
+    for( i = 0 ; i < max ; i++ )
     {
-      printf("Cat Food Product #%\n",i+1);
-      printf("--------------------\n");
-     if( i == 0)
-     {
+         printf("Cat Food Product #%d\n",i+1);
+         printf("--------------------\n");
          printf("SKU           :");
-     }
-     else if(i == 1)
-     {
-         printf("PRICE         : $");
-     }
-     else if(i == 3)
-     {
-         printf("WEIGHT (LBS)  : ");
-     }
-     else if
-     {
-         printf("CALORIES/SERV.: ");
-     }
-     scanf("%d",&my_cat[i].SKU);
-     if(my_cat[i].SKU <= 0)
-     {
-         printf("ERROR: Enter a positive value: ");
          scanf("%d",&my_cat[i].SKU);
-     }
+         while(my_cat[i].SKU <= 0)
+              {
+                  printf("ERROR: Enter a positive value: ");
+                   scanf("%d",&my_cat[i].SKU);
+             }
+         printf("PRICE         : $");
+         scanf("%d",&my_cat[i].price);
+         while(my_cat[i].price <= 0)
+              {
+                  printf("ERROR: Enter a positive value: ");
+                   scanf("%d",&my_cat[i].price);
+             }
+         printf("WEIGHT (LBS)  : ");
+         scanf("%d",&my_cat[i].calories);
+         while(my_cat[i].calories <= 0)
+              {
+                  printf("ERROR: Enter a positive value: ");
+                   scanf("%d",&my_cat[i].weight);
+             }
+         printf("CALORIES/SERV.: ");
+         scanf("%d",&my_cat[i].calories;
+         while(my_cat[i].calories <= 0)
+              {
+                  printf("ERROR: Enter a positive value: ");
+                   scanf("%d",&my_cat[i].calories);
+             }
+             printf("\n")
     }
+};    
+    void displayCatFoodHeader()
+    {
+        printf("SKU         $Price    Bag-lbs Cal/Serv\n");
+        printf("------- ---------- ---------- --------\n");
+    };
+    void displayCatFoodData(int max)
+    {
+       int i;
+        for(i = 0 ; i < max ; i++)
+        {
+          printf("%07d %10.2lf %10.1lf %8d\n",my_cat[i].SKU,my_cat[i].price,my_cat[i].weight,my_cat[i].calories);
+          
+        }
 };
-
-
-
