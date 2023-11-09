@@ -113,10 +113,10 @@ void openingMessage()
   printf("Enter the details for 3 dry food bags of product data for analysis.\n");
   printf("NOTE: A 'serving' is 64g\n");
 };
-void getCatFoodInfo(int max)
+void getCatFoodInfo(int *my_cat[MAXPRODUCTNUM])
 {
     int i ;
-    CatFoodInfo my_cat[MAXPRODUCTNUM];
+    //CatFoodInfo my_cat[MAXPRODUCTNUM];
     for( i = 0 ; i < max ; i++ )
     {
          printf("Cat Food Product #%d\n",i+1);
@@ -136,8 +136,8 @@ void getCatFoodInfo(int max)
                    scanf("%d",&my_cat[i].price);
              }
          printf("WEIGHT (LBS)  : ");
-         scanf("%d",&my_cat[i].calories);
-         while(my_cat[i].calories <= 0)
+         scanf("%d",&my_cat[i].weight);
+         while(my_cat[i].weight <= 0)
               {
                   printf("ERROR: Enter a positive value: ");
                    scanf("%d",&my_cat[i].weight);
