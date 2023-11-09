@@ -113,8 +113,9 @@ void openingMessage()
   printf("Enter the details for 3 dry food bags of product data for analysis.\n");
   printf("NOTE: A 'serving' is 64g\n");
 };
-void getCatFoodInfo(int *my_cat[MAXPRODUCTNUM])
+void getCatFoodInfo(CatFoodInfo* my_cat[MAXPRODUCTNUM])
 {
+    int max =MAXPRODUCTNUM;
     int i ;
     //CatFoodInfo my_cat[MAXPRODUCTNUM];
     for( i = 0 ; i < max ; i++ )
@@ -122,32 +123,32 @@ void getCatFoodInfo(int *my_cat[MAXPRODUCTNUM])
          printf("Cat Food Product #%d\n",i+1);
          printf("--------------------\n");
          printf("SKU           :");
-         scanf("%d",&my_cat[i].SKU);
-         while(my_cat[i].SKU <= 0)
+         scanf("%d",&my_cat[i]->SKU);
+         while(my_cat[i]->SKU <= 0)
               {
                   printf("ERROR: Enter a positive value: ");
-                   scanf("%d",&my_cat[i].SKU);
+                   scanf("%d",&my_cat[i]->SKU);
              }
          printf("PRICE         : $");
-         scanf("%d",&my_cat[i].price);
-         while(my_cat[i].price <= 0)
+         scanf("%d",&my_cat[i]->price);
+         while(my_cat[i]->price <= 0)
               {
                   printf("ERROR: Enter a positive value: ");
-                   scanf("%d",&my_cat[i].price);
+                   scanf("%d",&my_cat[i]->price);
              }
          printf("WEIGHT (LBS)  : ");
-         scanf("%d",&my_cat[i].weight);
-         while(my_cat[i].weight <= 0)
+         scanf("%d",&my_cat[i]->weight);
+         while(my_cat[i]->weight <= 0)
               {
                   printf("ERROR: Enter a positive value: ");
-                   scanf("%d",&my_cat[i].weight);
+                   scanf("%d",&my_cat[i]->weight);
              }
          printf("CALORIES/SERV.: ");
-         scanf("%d",&my_cat[i].calories);
-         while(my_cat[i].calories <= 0)
+         scanf("%d",&my_cat[i]->calories);
+         while(my_cat[i]->calories <= 0)
               {
                   printf("ERROR: Enter a positive value: ");
-                   scanf("%d",&my_cat[i].calories);
+                   scanf("%d",&my_cat[i]->calories);
              }
              printf("\n");
     }
@@ -193,7 +194,7 @@ int main()
    printf("===========================\n\n");
    openingMessage();
    printf("\n");
-   getCatFoodInfo(MAXPRODUCTNUM);
+   getCatFoodInfo( &my_cat[MAXPRODUCTNUM]);
     
   return 0;
 }
