@@ -1,27 +1,22 @@
-//HEADER FILE EXTRACT
+#include <stdio.h>
 #define MAXPRODUCTNUM 3
 #define MAXGRAMNUM 
-typedef struct CatFoodInfo()
+typedef struct CatFoodInfo
 {
   int SKU;
   double price;
   int calories;
   double weight;
+  
 }CatFoodInfo;
-//now declaring a 7 functions sys
-int getIntPositive(
-double getDoublePositive(
-void openingMessage(
-CatFoodInfo 
-getCatFoodInfo(MAXPRODUCTNUM);
-void displayCatFoodData(
-// int are passed by value and double my address
-int getIntPositive(int num)
+
+
+int getIntPositive()
 {
   int a,b,c;
   int loop = 0;
   printf("------------------------\n");
-  printf("Function: getIntPositive\n"):
+  printf("Function: getIntPositive\n");
   printf("------------------------\n");
   printf("For each of these tests, enter the following\n");
   printf("three values (space delimited): -1 0 24\n");
@@ -35,7 +30,7 @@ int getIntPositive(int num)
      }
      else
      {
-         printf("<PASSED>")
+         printf("<PASSED>");
      }
      if(b <= 0)
      {
@@ -43,7 +38,7 @@ int getIntPositive(int num)
      }
      else
      {
-         printf("<PASSED>")
+         printf("<PASSED>");
      }
      if(c <= 0)
      {
@@ -51,17 +46,18 @@ int getIntPositive(int num)
      }
      else
      {
-         printf("<PASSED>")
+         printf("<PASSED>");
      }
      loop++;
-   }
-}
+  }
+  };
+
 double getDoublePositive()
 {
   double a,b,c;
   double loop = 0;
   printf("------------------------\n");
-  printf("Function: getDouble\n"):
+  printf("Function: getDouble\n");
   printf("------------------------\n");
   printf("For each of these tests, enter the following\n");
   printf("three values (space delimited): -1 0 82.5\n");
@@ -155,3 +151,31 @@ void getCatFoodInfo(int max)
           
         }
     };
+    
+    
+    
+    
+    
+    
+    
+    
+    
+#include<stdio.h>
+int main()
+{
+    CatFoodInfo my_cat[MAXPRODUCTNUM];
+   printf("============================\n");
+   printf("Pre-testing Helper Functions\n");
+   printf("============================\n\n");
+    
+    
+    
+  
+  return 0;
+}
+
+    
+    
+    
+    
+    
