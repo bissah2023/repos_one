@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+typedef struct {
+    int id;
+    char name[20];
+} Student;
+
+void printStudent(Student *s) {
+    printf("ID: %d\n", s->id);
+    printf("Name: %s\n", s->name);
+}
+
+int main() {
+    Student s1;
+
+    // Input for id
+    printf("Enter ID: ");
+    scanf("%d", &s1.id);
+
+    // Input for name
+    printf("Enter Name: ");
+    scanf("%s", s1.name);
+
+    printStudent(&s1);
+
+    return 0;
+}
