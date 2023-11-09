@@ -15,6 +15,7 @@ piece of work is entirely of my own creation.
 //HEADER FILE EXTRACT
 #define MAXPRODUCTNUM 3
 #define MAXGRAMNUM 
+#define _CRT_SECURE_NO_WARNINGS_
 typedef struct CatFoodInfo
 {
   int SKU;
@@ -122,7 +123,7 @@ void getCatFoodInfo(CatFoodInfo* my_cat[MAXPRODUCTNUM])
     {
          printf("Cat Food Product #%d\n",i+1);
          printf("--------------------\n");
-         printf("SKU           :");
+         printf("SKU           : ");
          scanf("%d",&my_cat[i]->SKU);
          while(my_cat[i]->SKU <= 0)
               {
