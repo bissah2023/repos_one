@@ -37,7 +37,7 @@ int getIntPositive()
   printf("three values (space delimited): -1 0 24\n");
   while(loop <MAXPRODUCTNUM)
   {
-    printf("\nTEST-1: ");
+    printf("\nTEST-%d: ",loop+1);
     scanf("%d %d %d", &a,&b,&c);
     if(a <= 0)
      {
@@ -69,7 +69,7 @@ int getIntPositive()
 double getDoublePositive()
 {
   double a,b,c;
-  double loop = 0;
+  int loop = 0;
   printf("------------------------\n");
   printf("Function: getDouble\n");
   printf("------------------------\n");
@@ -77,7 +77,7 @@ double getDoublePositive()
   printf("three values (space delimited): -1 0 82.5\n");
   while(loop <3)
   {
-    printf("\nTEST-1: ");
+    printf("\nTEST-%d: ",loop+1);
     scanf("%lf %lf %lf", &a,&b,&c);
     if(a <= 0)
      {
@@ -185,7 +185,13 @@ int main()
    printf("Pre-testing Helper Functions\n");
    printf("============================\n\n");
    getIntPositive();
-    
+   printf("\n\n");
+   getDoublePositive();
+   printf("\n\n");
+   printf("===========================\n");
+   printf("Starting Main Program Logic\n");
+   printf("===========================\n\n");
+   openingMessage();
     
   return 0;
 }
