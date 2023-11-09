@@ -15,47 +15,27 @@ piece of work is entirely of my own creation.
 //HEADER FILE EXTRACT
 #define MAXPRODUCTNUM 3
 #define MAXGRAMNUM 
-typedef struct CatFoodInfo()
+typedef struct CatFoodInfo
 {
   int SKU;
   double price;
   int calories;
   double weight;
 }CatFoodInfo;
-//now declaring a 7 functions sys
-int getIntPositive(
-double getDoublePositive(
-void openingMessage(
-CatFoodInfo 
-getCatFoodInfo(MAXPRODUCTNUM);
-void displayCatFoodData(
-// int are passed by value and double my address
-void start(
 
 
-//ENd of headerfile content
-int start()
-{
-    CatFoodInfo my_cat[MAXPRODUCTNUM];
-   printf("============================\n");
-   printf("Pre-testing Helper Functions\n");
-   printf("============================\n\n");
-    
-    
-    
-  
-  return 0;
-}
-int getIntPositive(int num)
+
+
+int getIntPositive()
 {
   int a,b,c;
   int loop = 0;
   printf("------------------------\n");
-  printf("Function: getIntPositive\n"):
+  printf("Function: getIntPositive\n");
   printf("------------------------\n");
   printf("For each of these tests, enter the following\n");
   printf("three values (space delimited): -1 0 24\n");
-  while(loop <3)
+  while(loop <MAXPRODUCTNUM)
   {
     printf("\nTEST-1: ");
     scanf("%d %d %d", &a,&b,&c);
@@ -65,7 +45,7 @@ int getIntPositive(int num)
      }
      else
      {
-         printf("<PASSED>")
+         printf("<PASSED>");
      }
      if(b <= 0)
      {
@@ -73,7 +53,7 @@ int getIntPositive(int num)
      }
      else
      {
-         printf("<PASSED>")
+         printf("<PASSED>");
      }
      if(c <= 0)
      {
@@ -81,7 +61,7 @@ int getIntPositive(int num)
      }
      else
      {
-         printf("<PASSED>")
+         printf("<PASSED>");
      }
      loop++;
    }
@@ -91,7 +71,7 @@ double getDoublePositive()
   double a,b,c;
   double loop = 0;
   printf("------------------------\n");
-  printf("Function: getDouble\n"):
+  printf("Function: getDouble\n");
   printf("------------------------\n");
   printf("For each of these tests, enter the following\n");
   printf("three values (space delimited): -1 0 82.5\n");
@@ -105,7 +85,7 @@ double getDoublePositive()
      }
      else
      {
-         printf("<PASSED>")
+         printf("<PASSED>");
      }
      if(b <= 0)
      {
@@ -113,7 +93,7 @@ double getDoublePositive()
      }
      else
      {
-         printf("<PASSED>")
+         printf("<PASSED>");
      }
      if(c <= 0)
      {
@@ -121,7 +101,7 @@ double getDoublePositive()
      }
      else
      {
-         printf("<PASSED>")
+         printf("<PASSED>");
      }
      loop++;
    }
@@ -131,11 +111,12 @@ void openingMessage()
   printf("Cat Food Cost Analysis\n");
   printf("======================\n");
   printf("Enter the details for 3 dry food bags of product data for analysis.\n");
-  printf("NOTE: A 'serving' is 64g\n"):
+  printf("NOTE: A 'serving' is 64g\n");
 };
 void getCatFoodInfo(int max)
 {
     int i ;
+    CatFoodInfo my_cat[MAXPRODUCTNUM];
     for( i = 0 ; i < max ; i++ )
     {
          printf("Cat Food Product #%d\n",i+1);
@@ -162,13 +143,13 @@ void getCatFoodInfo(int max)
                    scanf("%d",&my_cat[i].weight);
              }
          printf("CALORIES/SERV.: ");
-         scanf("%d",&my_cat[i].calories;
+         scanf("%d",&my_cat[i].calories);
          while(my_cat[i].calories <= 0)
               {
                   printf("ERROR: Enter a positive value: ");
                    scanf("%d",&my_cat[i].calories);
              }
-             printf("\n")
+             printf("\n");
     }
 };    
     void displayCatFoodHeader()
@@ -179,9 +160,32 @@ void getCatFoodInfo(int max)
     void displayCatFoodData(int max)
     {
        int i;
+       CatFoodInfo my_cat[MAXPRODUCTNUM];
         for(i = 0 ; i < max ; i++)
         {
           printf("%07d %10.2lf %10.1lf %8d\n",my_cat[i].SKU,my_cat[i].price,my_cat[i].weight,my_cat[i].calories);
           
         }
 };
+
+
+
+
+
+
+
+
+
+
+
+int main()
+{
+    CatFoodInfo my_cat[MAXPRODUCTNUM];
+   printf("============================\n");
+   printf("Pre-testing Helper Functions\n");
+   printf("============================\n\n");
+   getIntPositive();
+    
+    
+  return 0;
+}
