@@ -192,6 +192,8 @@ int main()
    printf("Starting Main Program Logic\n");
    printf("===========================\n\n");
    openingMessage();
+   printf("\n");
+   getCatFoodInfo(MAXPRODUCTNUM);
     
   return 0;
 }
