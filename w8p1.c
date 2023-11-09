@@ -17,7 +17,7 @@ piece of work is entirely of my own creation.
 #define MAXGRAMNUM 
 typedef struct CatFoodInfo()
 {
-  int ID;
+  int SKU;
   double price;
   int calories;
   double weight;
@@ -135,8 +135,34 @@ void openingMessage()
 };
 void getCatFoodInfo(MAXPRODUCTNUM)
 {
-    printf("Cat Food Product #1\n");
-    printf("--------------------\n");
+    int i ;
+    for( i = 0 ; i < 3 ; i++ )
+    {
+      printf("Cat Food Product #%\n",i+1);
+      printf("--------------------\n");
+     if( i == 0)
+     {
+         printf("SKU           :");
+     }
+     else if(i == 1)
+     {
+         printf("PRICE         : $");
+     }
+     else if(i == 3)
+     {
+         printf("WEIGHT (LBS)  : ");
+     }
+     else if
+     {
+         printf("CALORIES/SERV.: ");
+     }
+     scanf("%d",&my_cat[i].SKU);
+     if(my_cat[i].SKU <= 0)
+     {
+         printf("ERROR: Enter a positive value: ");
+         scanf("%d",&my_cat[i].SKU);
+     }
+    }
 };
 
 
